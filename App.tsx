@@ -1,15 +1,16 @@
-
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { GoogleGenAI, LiveServerMessage, Modality } from "@google/genai";
-import { AgentProfile, ConnectionStatus, Mission, MissionStatus, Sender, TranscriptEntry, RecognizedSong } from './types';
+import { AgentProfile, ConnectionStatus, Mission, MissionStatus, Sender, TranscriptEntry } from './types';
 import * as db from './services/database';
 import { createPcmBlob, decode, decodeAudioData, playConnectingSound, playConnectedSound, playDisconnectedSound, playSirenSound } from './services/audioUtils';
-import { MissionIcon, PhoneIcon, SpiderIcon, LeaderboardIcon, SecureChannelIcon, LogoutIcon, SpinnerIcon } from './components/icons';
+import { MissionIcon, SpiderIcon, LeaderboardIcon, SecureChannelIcon, LogoutIcon, SpinnerIcon } from './components/icons';
 import { Onboarding } from './components/Onboarding';
 import { Leaderboard, MOCK_TOP_AGENTS } from './components/Leaderboard';
 import { InitialAuthScreen, LoginScreen, ForgotPasswordScreen, ResetPasswordScreen } from './components/Auth';
 import { MissionControl } from './components/MissionControl';
 import { AgentProfile as AgentProfileComponent } from './components/AgentProfile';
+// NOTE: PhoneIcon is imported via icons.tsx instead of components/icons
+import { PhoneIcon } from './components/icons';
 
 const getSystemInstruction = (agent: AgentProfile, isReturning: boolean): string => {
     const greeting = isReturning
@@ -40,10 +41,10 @@ type AppState = 'auth' | 'main';
 const ChatPlaceholder: React.FC = () => (
     <div className="flex-grow flex flex-col items-center justify-center p-8 text-center h-full border-4 border-dashed border-red-900/20 rounded-lg bg-red-900/5">
         <SpiderIcon className="w-24 h-24 text-red-900/50 mb-6 animate-pulse" />
-        <h2 className="text-3xl font-bold text-red-900/50 mb-2">CHANNEL ENCRYPTED</h2>
+        <h2 className="text-3xl font-bold text-red-900/50 mb-2">ENCRYPTED AUDIO LINK</h2>
         <p className="text-gray-600 max-w-md">
-            This line is monitored by the Resistance. 
-            <br/>Connect to report in and receive your next objective.
+            This secure line is monitored by the Resistance. 
+            <br/>Connect to report in via voice and receive your next objective.
         </p>
     </div>
 );
