@@ -1,7 +1,0 @@
-{
-  "name": "ARG: Raybot Spider Resistance",
-  "description": "An interactive, voice-driven alternate reality game experience where users connect to a clandestine line to receive clues on how to fight the menacing Raybot Spiders and uncover the truth behind 'The Corruption'.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
-}
