@@ -1,21 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARG: Raybot Spider Resistance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* @import using a more thematic font w/ */
-        @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
-
-        body {
-            font-family: 'Roboto Mono', monospace;
-        }
+      /* Using a more thematic font */
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+      body {
+        font-family: 'Roboto Mono', monospace;
+      }
     </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "node-fetch": "https://aistudiocdn.com/node-fetch@^3.3.2",
+    "crypto": "https://aistudiocdn.com/crypto@^1.0.1",
+    "express": "https://aistudiocdn.com/express@^5.1.0",
+    "form-data": "https://aistudiocdn.com/form-data@^4.0.5",
+    "busboy": "https://aistudiocdn.com/busboy@^1.6.0"
+  }
+}
+</script>
 </head>
-<body class="bg-black text-gray-200">
+  <body class="bg-black text-gray-300">
     <div id="root"></div>
     <script src="/dist/bundle.js"></script>
-</body>
+  </body>
 </html>
