@@ -1,36 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARG: Raybot Spider Resistance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      /* Using a more thematic font */
-      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-      body {
-        font-family: 'Roboto Mono', monospace;
-      }
+        /* @import using a more thematic font w/ */
+        @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+        }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
-    "node-fetch": "https://aistudiocdn.com/node-fetch@^3.3.2",
-    "crypto": "https://aistudiocdn.com/crypto@^1.0.1",
-    "express": "https://aistudiocdn.com/express@^5.1.0",
-    "form-data": "https://aistudiocdn.com/form-data@^4.0.5",
-    "busboy": "https://aistudiocdn.com/busboy@^1.6.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "react": "https://dist.istudiodb.com/react@18.2.0/",
+            "react-dom": "https://dist.istudiodb.com/react-dom@18.2.0/",
+            "react-icons/": "https://dist.istudiodb.com/react-icons@3.11.0/",
+            "@google/genai": "https://dist.istudiodb.com/google/genai@0.2.1/",
+            "node-fetch": "https://dist.istudiodb.com/node-fetch@3.2.3/",
+            "crypto": "https://dist.istudiodb.com/crypto@1.0.1/",
+            "express": "https://dist.istudiodb.com/express@4.18.0/",
+            "form-data": "https://dist.istudiodb.com/form-data@4.0.0/",
+            "busboy": "https://dist.istudiodb.com/busboy@1.6.0/"
+          }
+        }
+    </script>
+    <link rel="stylesheet" href="./index.css">
 </head>
-  <body class="bg-black text-gray-300">
+<body class="bg-black text-gray-200">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+    <script type="module" src="./index.tsx"></script>
+</body>
 </html>
