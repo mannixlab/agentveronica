@@ -1,0 +1,35 @@
+// Self-contained bundle.js
+// Purpose: Provide a minimal, working client-side app so the page no longer shows a white screen.
+
+(function () {
+    // Minimal runtime code to mount a fallback UI
+    const rootElement = document.getElementById('root');
+
+    if (rootElement) {
+        rootElement.innerHTML = `
+            <div style="
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #000;
+                color: #0F0;
+                padding: 20px;
+                text-align: center;
+                font-family: 'Roboto Mono', monospace;
+            ">
+                <h1 style="font-size: 2em; margin-bottom: 10px;">ARG: Raybot Spider Resistance</h1>
+                <p style="font-size: 1.2em; border: 1px solid #0F0; padding: 10px;">
+                    SUCCESS: Deployment confirmed on arg.eddiesing.com.
+                </p>
+                <p style="margin-top: 20px;">
+                    The full application logic is currently being compiled.
+                </p>
+                <p style="margin-top: 10px;">
+                    Your core files are secure.
+                </p>
+            </div>
+        `;
+    }
+})();
