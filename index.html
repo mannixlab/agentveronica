@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FINAL SERVER TEST</title>
+    <title>ARG: Raybot Spider Resistance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* @import using a more thematic font w/ */
+        @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+        }
+    </style>
 </head>
-<body>
-    <h1 style="color: red; text-align: center; margin-top: 50px;">
-        ✅ SERVER IS ALIVE! IF YOU SEE THIS, IT IS WORKING.
-    </h1>
+<body class="bg-black text-gray-200">
+    <div id="root"></div>
+    <script src="/dist/bundle.js"></script>
 </body>
 </html>
